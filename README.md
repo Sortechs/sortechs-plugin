@@ -2,7 +2,7 @@
 #### Tags: sortechs,social media ,wordpress , automation,Instagram , API 
 #### link: https://www.sortechs.com/
 #### Requires at least: 4.0
-#### Tested up to: 4.8
+#### Tested up to: 5.6
 #### Requires PHP: 5.6
 #### Stable tag: 1.1
 #### License: GPLv2 or later
