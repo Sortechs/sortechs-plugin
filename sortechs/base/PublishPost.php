@@ -65,7 +65,7 @@ class PublishPost{
                     //'sectionId'=>'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx', //id from your api *Required or sectionName
                     'sectionName'=>$item,//*Required or sectionId
                     'title'=>$post['post_title'],//*Required
-                    'article'=>empty($post['content'])?$post['post_title']:$post['content'],//*Required
+                    'article'=>$post['content'],//*Required
                     'url'=>$post['url'],//*Required
                     'newsId'=>$post['ID'], /*id from your DATABASE , Like 1000  *Required */
                     'options'=>[] /* Optional*/
