@@ -68,7 +68,9 @@ class PublishPost{
                     'article'=>$post['content'],//*Required
                     'url'=>$post['url'],//*Required
                     'newsId'=>$post['ID'], /*id from your DATABASE , Like 1000  *Required */
-                    'options'=>[] /* Optional*/
+                    'options'=>[
+
+                    ] /* Optional*/
                 ]);
                 if(!empty($media_array)){
                    $s =  $sortechs->AddNewsWithMedia($token,$news,$media);

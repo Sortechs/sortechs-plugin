@@ -58,7 +58,7 @@ class Arrays{
             'ID'=>$post->ID,
             'url'=>$post->guid,
             'post_title'=>$post->post_title,
-            'content'=>$post->content,
+            'content'=>$post->post_content,
             'post_status'=>$post->post_status,
             'post_category'=>$cats,
             'tags'=>$post_tags,
