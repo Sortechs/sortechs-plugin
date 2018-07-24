@@ -68,13 +68,13 @@ class SortechsRequest
         $this->method = $method;
         $this->accessToken = $accessToken;
         $this->PreparationParams($params);
-        if(SORTECHS_NOW==2){
+       /* if(SORTECHS_NOW==2){
             $this->url=SORTECHS_DOMAIN_API_TEST;
         }elseif(SORTECHS_NOW==1){
             $this->url=SORTECHS_DOMAIN_API;
         }elseif(SORTECHS_NOW==3){
             $this->url=SORTECHS_DOMAIN_API_LOCAL;
-        }
+        }*/
      }
 
     public function Request(){

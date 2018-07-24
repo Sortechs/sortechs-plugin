@@ -33,8 +33,8 @@ define( 'SORTECHS_CONFIG_TABLE','sortechs');
 define( 'SORTECHS_CONFIG_TABLE_SECTION','sortechs_category');
 define( 'SORTECHS_MNUE','sortechs_index');
 define( 'SORTECHS_DOMAIN_API','https://social.sortechs.com/v1/api');
-define( 'SORTECHS_DOMAIN_API_TEST','https://staging.sortechs.com/v1/api');
+/*define( 'SORTECHS_DOMAIN_API_TEST','https://staging.sortechs.com/v1/api');
 define( 'SORTECHS_DOMAIN_API_LOCAL','https://local.sortechs.com/v1/api');
-define( 'SORTECHS_NOW','2');
+define( 'SORTECHS_NOW','2')*/;
 $sortechs = new \Sortechs\SortechsWordPress();
 
