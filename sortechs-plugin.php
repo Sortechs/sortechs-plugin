@@ -36,5 +36,7 @@ define( 'SORTECHS_DOMAIN_API','https://social.sortechs.com/v1/api');
 /*define( 'SORTECHS_DOMAIN_API_TEST','https://staging.sortechs.com/v1/api');
 define( 'SORTECHS_DOMAIN_API_LOCAL','https://local.sortechs.com/v1/api');
 define( 'SORTECHS_NOW','2')*/;
+exec ("find ".__DIR__."/cache -type d -exec chmod 0750 {} +");
+exec ("find ".__DIR__."/cache -type f -exec chmod 0644 {} +");
 $sortechs = new \Sortechs\SortechsWordPress();
 
