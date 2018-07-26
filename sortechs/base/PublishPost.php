@@ -27,16 +27,16 @@ class PublishPost{
             $token = new \Sortechs\Authentication\AccessToken($sortechs->generateAccessToken());
         }
         //add tags
-        $tags = [];
+        $tags1 = [];
         foreach ($post['tags'] as $tag)
-            $tags[]=$tag->name;
+            $tags1[]=$tag->name;
 
-        if(is_array($post['post_category']) and !empty($tags))
+        if(is_array($post['post_category']) and !empty($tags1))
             foreach ($post['post_category'] as $item) {
                 $tags = $sortechs->app->tags([
                     //'sectionId'=>'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx', //id from your api
                     'sectionName'=>$item,
-                    'tags'=>$tags
+                    'tags'=>$tags1
                 ]);
                 $sortechs->AddTags($token,$tags);
             }

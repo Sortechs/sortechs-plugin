@@ -26,9 +26,6 @@ class Text{
     }
 
     private function ClearHtmlTags($string){
-        if(empty($string)){
-            return $string;
-        }
         $string = strip_tags($string);
         $string = str_replace('&nbsp;',' ',$string);
         $string = str_replace('&#039;','',$string);

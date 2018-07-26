@@ -60,9 +60,8 @@ class Tags{
      * @param mixed $Text
      */
     public function setText($Text){
-
-        $this->text =  $Text;
-
+        $helper = new Text($Text);
+        $this->text = $helper->getString();
     }
 
 
