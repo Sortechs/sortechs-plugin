@@ -181,7 +181,10 @@ class SortechsApp{
         if(empty($data['tags'])){
             throw new SortechsExceptions('Please full tags on array');
         }
+        echo '<pre>';
         foreach ($data['tags'] as $value) {
+            print_r($value);
+            continue;
             $tag = new Tags();
             $tag->setText($value);
             if(isset($data['sectionId']))
