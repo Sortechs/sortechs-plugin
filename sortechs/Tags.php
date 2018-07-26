@@ -61,30 +61,7 @@ class Tags{
      */
     public function setText($Text){
 
-        $string = strip_tags($Text);
-        $string = str_replace('&nbsp;',' ',$string);
-        $string = str_replace('&#039;','',$string);
-        $string = str_replace('&raquo;','»',$string);
-        $string = str_replace('&laquo;','«',$string);
-        $string = str_replace('&quot;','"',$string);
-        $string = str_replace('&apos;','\'',$string);
-        $string = str_replace('&#x2018;','‘',$string);
-        $string = str_replace('&#x2019;','’',$string);
-        $string = str_replace('&#8220;','“',$string);
-        $string = str_replace('&#8221;','”',$string);
-        $string = str_replace('&#8220;','“',$string);
-        $string = str_replace('&#8221;','”',$string);
-        $string = str_replace('&#039;','\'',$string);
-        $string= preg_replace('/\p{C}+/u', "", $string);
-        $string = html_entity_decode($string);
-        $string = str_replace('# #', '#', $string);
-        $string = str_replace('##', '#', $string);
-        $string = str_replace('…',' ... ',$string);
-        $string = str_replace('”','"',$string);
-        $string = str_replace('“','"',$string);
-        $string = str_replace('–','-',$string);
-        $string = strip_tags($string);
-        $this->text =  $string;
+        $this->text =  $Text;
 
     }
 

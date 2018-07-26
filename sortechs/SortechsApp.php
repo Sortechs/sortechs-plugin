@@ -183,15 +183,40 @@ class SortechsApp{
         }
         echo '<pre>';
         foreach ($data['tags'] as $value) {
-            print_r($value);
-            continue;
+
             $tag = new Tags();
-            $tag->setText($value);
+            $string = strip_tags($value);
+            $string = str_replace('&nbsp;',' ',$string);
+            $string = str_replace('&#039;','',$string);
+            $string = str_replace('&raquo;','»',$string);
+            $string = str_replace('&laquo;','«',$string);
+            $string = str_replace('&quot;','"',$string);
+            $string = str_replace('&apos;','\'',$string);
+            $string = str_replace('&#x2018;','‘',$string);
+            $string = str_replace('&#x2019;','’',$string);
+            $string = str_replace('&#8220;','“',$string);
+            $string = str_replace('&#8221;','”',$string);
+            $string = str_replace('&#8220;','“',$string);
+            $string = str_replace('&#8221;','”',$string);
+            $string = str_replace('&#039;','\'',$string);
+            $string= preg_replace('/\p{C}+/u', "", $string);
+            $string = html_entity_decode($string);
+            $string = str_replace('# #', '#', $string);
+            $string = str_replace('##', '#', $string);
+            $string = str_replace('…',' ... ',$string);
+            $string = str_replace('”','"',$string);
+            $string = str_replace('“','"',$string);
+            $string = str_replace('–','-',$string);
+            $string = strip_tags($string);
+            $tag->setText($string);
             if(isset($data['sectionId']))
                 $tag->setSectionId($data['sectionId']);
             if(isset($data['sectionName']))
                 $tag->setSectionName($data['sectionName']);
             $tags[] = $tag;
+
+            print_r($tag);
+            continue;
         }
 
         die;
