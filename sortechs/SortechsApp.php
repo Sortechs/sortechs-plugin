@@ -215,11 +215,8 @@ class SortechsApp{
                 $tag->setSectionName($data['sectionName']);
             $tags[] = $tag;
 
-            print_r($tag);
-            continue;
         }
 
-        die;
 
         return [
             'tags'=>$tags,
