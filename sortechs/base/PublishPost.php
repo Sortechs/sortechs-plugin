@@ -52,11 +52,14 @@ class PublishPost{
 
         foreach ($post['attachments'] as $item) {
             $type= 'image';
-            $media_array[]= [
-                'url'=>$item->guid,
-                'caption'=>null,
-                'type'=>$type
-            ];
+            if($post['image']!=$item->guid){
+
+                $media_array[]= [
+                    'url'=>$item->guid,
+                    'caption'=>null,
+                    'type'=>$type
+                ];
+            }
         }
         $media = $sortechs->app->media($media_array);
         if(is_array($post['post_category']))
