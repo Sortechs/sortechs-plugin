@@ -194,6 +194,8 @@ class SortechsApp{
             $tags[] = $tag;
         }
 
+        die;
+
         return [
             'tags'=>$tags,
             'sectionId'=>isset($data['sectionId'])?$data['sectionId']:'',
