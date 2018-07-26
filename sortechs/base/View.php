@@ -15,10 +15,7 @@ class View{
 
     public function __construct(){
         $loader = new Twig_Loader_Filesystem(SORTECHS__PLUGIN_DIR.'view/');
-        $twig =  new Twig_Environment($loader, array(
-           // 'cache' => SORTECHS__PLUGIN_DIR.'cache/',
-            'debug' => SORTECHS__DEBUG
-        ));
+        $twig =  new Twig_Environment($loader);
         $this->setTwig($twig);
     }
 
